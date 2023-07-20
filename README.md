@@ -6,7 +6,7 @@ This repository provides a script and recipe to train the BERT model with our pr
 
 CAME: Confidence-guided Adaptive Memory Efficient Optimization
 
-This work has been accepted by ACL2023 main conference (*Outstanding Paper Award*).
+This work has been accepted by ACL2023 main conference (***Outstanding Paper Award***).
 
 In this work, we studied a confidence-guided strategy to reduce the instability of existing memory efficient optimizers. Based on this strategy, we proposed CAME to simultaneously achieve two goals: fast convergence as in traditional adaptive methods, and low memory usage as in memory-efficient methods.
 
