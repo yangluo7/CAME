@@ -52,7 +52,7 @@ Alpaca-7B and Alpaca-7B-CAME are evaluated using [Instruct-eval](https://github.
 
 ![CAME_gpt2](assets/gpt-2_came.png)
 
-The pre-training of GPT-2 (Medium, 345M) is based on [Megatron-LM](https://github.com/NVIDIA/Megatron-LM). To replicate our result, add the CAME optimizer in [`megatron/optimizer/__init__.py`](https://github.com/NVIDIA/Megatron-LM/blob/main/megatron/optimizer/__init__.py) and THEN?
+The pre-training of GPT-2 (Medium, 345M) is based on [Megatron-LM](https://github.com/NVIDIA/Megatron-LM). To replicate our result, add the CAME optimizer in [`megatron/optimizer/__init__.py`](https://github.com/NVIDIA/Megatron-LM/blob/main/megatron/optimizer/__init__.py) and set the *args.optimizer* to "came".
 
 ## Citation
 
