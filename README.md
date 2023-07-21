@@ -24,7 +24,7 @@ optimizer = CAME(model.parameters(), lr=2e-4, weight_decay=1e-2, betas=(0.9, 0.9
 
 # Experimental Results for Some Language Models
 
-## LLaMA-7B Fine-tuning --- Alpaca-7B
+## LLaMA-7B Fine-tune --- Alpaca-7B
 
 |                | MMLU      | BBH       | WikiText | Hellaswag | TruthfulQA (MC) | BoolQ     | COPA  | WSC       | WIC       |
 |----------------|-----------|-----------|----------|-----------|-----------------|-----------|-------|-----------|-----------|
