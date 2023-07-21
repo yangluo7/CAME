@@ -33,9 +33,13 @@ Apart from the BERT and T5 experiments shown in the paper, we conduct more and r
 | Alpaca-7B      | 40.21     | 6.74     | 59.76     | **38.89**       | **79.57** | **88.00** | 46.15     | 49.84     |
 | Alpaca-7B-CAME | **40.59** | **6.38** | **59.80** | 38.61           | 79.08     | **88.00** | **49.04** | **50.78** |
 
+The fine-tuning of LLaMA-7B is mainly based on [stanford-alpaca](https://github.com/tatsu-lab/stanford_alpaca) by changing the default optimizer "adamw" to "came" and adding the CAME optimzier in transformer package. The evaluation of Alpaca-7B and Alpaca-7B-CAME is based on [Instruct-eval](https://github.com/declare-lab/instruct-eval) and [lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness).
+
 ### Pre-training GPT-2
 
 ![CAME_gpt2](assets/gpt-2_came.png)
+
+The pre-training of GPT-2 is based on [Megatron-LM](https://github.com/NVIDIA/Megatron-LM) by adding the CAME optimizer in [megatron/optimizer/__init__.py](https://github.com/NVIDIA/Megatron-LM/blob/main/megatron/optimizer/__init__.py) correspondingly.
 
 ## Citation
 
