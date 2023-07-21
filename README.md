@@ -19,11 +19,11 @@ The pseudo code is presented in the figure with difference with Adafactor in blu
 ```python
 from came_pytorch import CAME
 optimizer = CAME(
-  model.parameters(),
-  lr=2e-4,
-  weight_decay=1e-2,
-  betas=(0.9, 0.999, 0.9999),
-  eps=(1e-30, 1e-16)
+    model.parameters(),
+    lr=2e-4,
+    weight_decay=1e-2,
+    betas=(0.9, 0.999, 0.9999),
+    eps=(1e-30, 1e-16)
 )
 ```
 
@@ -38,13 +38,15 @@ Apart from the BERT and T5 experiments shown in the paper, we conduct more and r
 | Alpaca-7B      | 40.21     | 6.74     | 59.76     | **38.89**       | **79.57** | **88.00** | 46.15     | 49.84     |
 | Alpaca-7B-CAME | **40.59** | **6.38** | **59.80** | 38.61           | 79.08     | **88.00** | **49.04** | **50.78** |
 
-We have fine-tuned LLaMA-7B primarily based on [stanford-alpaca](https://github.com/tatsu-lab/stanford_alpaca) by changing the default optimizer "adamw" to "came" and adding the CAME optimizer to the transformer package. Alpaca-7B and Alpaca-7B-CAME are evaluated using [Instruct-eval](https://github.com/declare-lab/instruct-eval) and [lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness).
+We fine-tuned LLaMA-7B with [stanford-alpaca](https://github.com/tatsu-lab/stanford_alpaca) (52k instruction-tuning dataset). To replicate our result, first register the CAME optimizer to the transformer package. Then in Alpaca training script, change the default optimizer from "adamw" to "came".
+
+Alpaca-7B and Alpaca-7B-CAME are evaluated using [Instruct-eval](https://github.com/declare-lab/instruct-eval) and [lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness).
 
 ### Pre-training GPT-2
 
 ![CAME_gpt2](assets/gpt-2_came.png)
 
-The pre-training of GPT-2 is based on [Megatron-LM](https://github.com/NVIDIA/Megatron-LM) by adding the CAME optimizer in [megatron/optimizer/__init__.py](https://github.com/NVIDIA/Megatron-LM/blob/main/megatron/optimizer/__init__.py) correspondingly.
+The pre-training of GPT-2 (SIZE HERE) is based on [Megatron-LM](https://github.com/NVIDIA/Megatron-LM). To replicate our result, add the CAME optimizer in [`megatron/optimizer/__init__.py`](https://github.com/NVIDIA/Megatron-LM/blob/main/megatron/optimizer/__init__.py) and THEN?
 
 ## Citation
 
