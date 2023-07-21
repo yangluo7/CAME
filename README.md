@@ -27,6 +27,12 @@ optimizer = CAME(
 )
 ```
 
+## Hyper-parameter Tuning
+
+* Pre-training: Based on our experiments on BERT-Large, GPT-2 and T5, it's suitable to choose a learning rate for CAME 3-1x smaller than that for AdamW.
+* Fine-tuning: In LLaMA-7B fine-tuning, we selected a learning rate 10x larger than AdamW.
+* Consider choosing $\beta_3$ between $[0.9995, 0.99995]$ if setting $\beta_1, \beta_2=0.9, 0.999$. Due to computational resource constraints, we did not explore more combinations of three betas. Different training tasks may require different combinations of optimal performance.
+* Please feel free to let us know what you find out during hyper-parameters tuning. We appreciate your valuable feedback and comments!
 ## Experiments
 
 Apart from the BERT and T5 experiments shown in the paper, we conduct more and record the results here.
@@ -46,7 +52,7 @@ Alpaca-7B and Alpaca-7B-CAME are evaluated using [Instruct-eval](https://github.
 
 ![CAME_gpt2](assets/gpt-2_came.png)
 
-The pre-training of GPT-2 (SIZE HERE) is based on [Megatron-LM](https://github.com/NVIDIA/Megatron-LM). To replicate our result, add the CAME optimizer in [`megatron/optimizer/__init__.py`](https://github.com/NVIDIA/Megatron-LM/blob/main/megatron/optimizer/__init__.py) and THEN?
+The pre-training of GPT-2 (Medium, 345M) is based on [Megatron-LM](https://github.com/NVIDIA/Megatron-LM). To replicate our result, add the CAME optimizer in [`megatron/optimizer/__init__.py`](https://github.com/NVIDIA/Megatron-LM/blob/main/megatron/optimizer/__init__.py) and THEN?
 
 ## Citation
 
