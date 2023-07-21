@@ -3,7 +3,7 @@
 
 This is an official implementation of **CAME** optimizer in the "[Confidence-guided Adaptive Memory Efficient Optimizer](https://arxiv.org/abs/2307.02047)". Please cite the paper and star this repo if you find CAME useful. Thanks!
 
-## Method
+## Method <font color="#0000dd">(Difference with Adafactor in blue fonts)</font>
 
 In this work, we studied a confidence-guided strategy to reduce the instability of existing memory efficient optimizers. Based on this strategy, we proposed CAME to simultaneously achieve two goals: fast convergence as in traditional adaptive methods, and low memory usage as in memory-efficient methods.
 
@@ -33,7 +33,7 @@ Apart from the BERT and T5 experiments shown in the paper, we conduct more and r
 | Alpaca-7B      | 40.21     | 6.74     | 59.76     | **38.89**       | **79.57** | **88.00** | 46.15     | 49.84     |
 | Alpaca-7B-CAME | **40.59** | **6.38** | **59.80** | 38.61           | 79.08     | **88.00** | **49.04** | **50.78** |
 
-The fine-tuning of LLaMA-7B is mainly based on [stanford-alpaca](https://github.com/tatsu-lab/stanford_alpaca) by changing the default optimizer "adamw" to "came" and adding the CAME optimzier in transformer package. The evaluation of Alpaca-7B and Alpaca-7B-CAME is based on [Instruct-eval](https://github.com/declare-lab/instruct-eval) and [lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness).
+We have fine-tuned LLaMA-7B primarily based on [stanford-alpaca](https://github.com/tatsu-lab/stanford_alpaca) by changing the default optimizer "adamw" to "came" and adding the CAME optimizer to the transformer package. Alpaca-7B and Alpaca-7B-CAME are evaluated using [Instruct-eval](https://github.com/declare-lab/instruct-eval) and [lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness).
 
 ### Pre-training GPT-2
 
