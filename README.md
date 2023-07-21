@@ -3,7 +3,7 @@
 
 This is an official implementation of **CAME** optimizer in the "[Confidence-guided Adaptive Memory Efficient Optimizer](https://arxiv.org/abs/2307.02047)". Please cite the paper and star this repo if you find CAME useful. Thanks!
 
-## Method <font color="#0000dd">(Difference with Adafactor in blue fonts)</font>
+## Method <span style="color:blue">(Difference with Adafactor in blue fonts)</span>
 
 In this work, we studied a confidence-guided strategy to reduce the instability of existing memory efficient optimizers. Based on this strategy, we proposed CAME to simultaneously achieve two goals: fast convergence as in traditional adaptive methods, and low memory usage as in memory-efficient methods.
 
