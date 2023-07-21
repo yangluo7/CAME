@@ -1,7 +1,7 @@
 <h1 align="center">CAME Optimizer</h1>
 <h3 align="center">ACL 2023 Outstanding Paper Award<br/>Confidence-guided Adaptive Memory Efficient Optimizer</h3>
 
-This is an official implementation of **CAME** optimizer in the [Confidence-guided Adaptive Memory Efficient Optimizer](https://arxiv.org/abs/2307.02047). Please cite the paper and star this repo if you find CAME useful. Thanks!
+This is an official implementation of **CAME** optimizer in the "[Confidence-guided Adaptive Memory Efficient Optimizer](https://arxiv.org/abs/2307.02047)". Please cite the paper and star this repo if you find CAME useful. Thanks!
 
 ## Method
 
