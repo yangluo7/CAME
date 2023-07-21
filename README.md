@@ -7,7 +7,7 @@ This is an official implementation of **CAME** optimizer in the "[Confidence-gui
 
 In this work, we studied a confidence-guided strategy to reduce the instability of existing memory efficient optimizers. Based on this strategy, we proposed CAME to simultaneously achieve two goals: fast convergence as in traditional adaptive methods, and low memory usage as in memory-efficient methods.
 
-![CAME_code](assets/came.png)
+![CAME_code](assets/came_code.png)
 
 ## Usage
 
