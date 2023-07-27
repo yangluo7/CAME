@@ -55,6 +55,14 @@ Alpaca-7B and Alpaca-7B-CAME are evaluated using [Instruct-eval](https://github.
 
 The pre-training of GPT-2 (Medium, 345M) is based on [Megatron-LM](https://github.com/NVIDIA/Megatron-LM). To replicate our result, add the CAME optimizer in [`megatron/optimizer/__init__.py`](https://github.com/NVIDIA/Megatron-LM/blob/main/megatron/optimizer/__init__.py) and set the *args.optimizer* to "came".
 
+## Memory Usage Comparison
+To ensure a fair comparison, we set the batch size to 1 for the pre-training of GPT-2 (Medium) to examine the memory footprint of CAME and AdamW.
+
+| Optimizer | Memory (GiB) | 
+|-----------|--------------|
+| AdamW     | 8.77         | 
+| CAME      | 7.44         | 
+
 ## Citation
 
 ```bibtex
