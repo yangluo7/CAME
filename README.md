@@ -58,10 +58,9 @@ The pre-training of GPT-2 (Medium, 345M) is based on [Megatron-LM](https://githu
 ## Memory Usage Comparison
 To ensure a fair comparison, we set the batch size to 1 for the pre-training of GPT-2 (Medium) to examine the memory footprint of CAME and AdamW.
 
-| Optimizer | Memory (GiB) | 
-|-----------|--------------|
-| AdamW     | 8.77         | 
-| CAME      | 7.44         | 
+|              | AdamW | CAME     | 
+|--------------|-------|----------|
+| Memory (GiB) | 8.77  | **7.44** | 
 
 ## Citation
 
