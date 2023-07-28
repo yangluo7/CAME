@@ -30,7 +30,6 @@ optimizer = CAME(
 ## Hyper-parameter Tuning
 
 * Pre-training: Based on our experiments on BERT-Large, GPT-2 and T5, it's suitable to choose a learning rate for CAME 3-1x smaller than that for AdamW.
-* Fine-tuning: In LLaMA-7B fine-tuning, we selected a learning rate 10x larger than AdamW.
 * Consider choosing $\beta_3$ between $[0.9995, 0.99995]$ if setting $\beta_1, \beta_2=0.9, 0.999$. Due to computational resource constraints, we did not explore more combinations of three betas. Different training tasks may require different combinations of optimal performance.
 * If you have any feedback or comments regarding hyper-parameter tuning, please do not hesitate to provide them to us!
 
