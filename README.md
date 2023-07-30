@@ -39,7 +39,7 @@ Apart from the BERT and T5 experiments shown in the paper, we conduct more and r
 
 ### Fine-tuning LLaMA-7B
 
-|                | MMLU      | WikiText | Hellaswag | TruthfulQA (MC) | BoolQ     | COPA      | WSC       | WIC       |
+|                | MMLU      | WikiText | HellaSwag | TruthfulQA (MC) | BoolQ     | COPA      | WSC       | WIC       |
 | -------------- | --------- | -------- | --------- | --------------- | --------- | --------- | --------- | --------- |
 | Alpaca-7B      | 40.21     | 6.74     | 59.76     | **38.89**       | **79.57** | **88.00** | 46.15     | 49.84     |
 | Alpaca-7B-CAME | **40.59** | **6.38** | **59.80** | 38.61           | 79.08     | **88.00** | **49.04** | **50.78** |
