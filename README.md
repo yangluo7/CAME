@@ -14,6 +14,10 @@ The pseudo code is presented in the figure with difference with Adafactor in blu
 </p>
 <!-- ![CAME_code](assets/came_code.png) -->
 
+## Install 
+```
+pip install came-pytorch
+```
 ## Usage
 
 ```python
