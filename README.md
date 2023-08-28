@@ -68,10 +68,11 @@ To ensure a fair comparison, we set the batch size to 1 for the pre-training of 
 ## Citation
 
 ```bibtex
-@article{luo2023came,
+@inproceedings{luo2023came,
   title={CAME: Confidence-guided Adaptive Memory Efficient Optimization},
   author={Luo, Yang and Ren, Xiaozhe and Zheng, Zangwei and Jiang, Zhuo and Jiang, Xin and You, Yang},
-  journal={arXiv preprint arXiv:2307.02047},
+  booktitle={Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)},
+  pages={4442--4453},
   year={2023}
 }
 ```
