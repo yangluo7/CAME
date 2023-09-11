@@ -1,6 +1,8 @@
 <h1 align="center">CAME Optimizer</h1>
 <h3 align="center">ACL 2023 Outstanding Paper Award<br/>Confidence-guided Adaptive Memory Efficient Optimization</h3>
 
+<h5 align="center">[Paper](https://arxiv.org/abs/2307.02047) | [Twitter](https://twitter.com/ZangweiZheng/status/1680227732788236289) | [Blog](https://zhengzangw.github.io/blogs/came) | [Pypi Package](https://pypi.org/project/came-pytorch/) | [zhihu](https://zhuanlan.zhihu.com/p/643816029)</h5> 
+
 This is an official implementation of **CAME** optimizer in the "[Confidence-guided Adaptive Memory Efficient Optimization](https://arxiv.org/abs/2307.02047)". Please cite the paper and star this repo if you find CAME useful. Thanks!
 
 ## Method
