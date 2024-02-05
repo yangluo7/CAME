@@ -6,7 +6,7 @@ with open("README.md", "r") as fh:
 setuptools.setup(
     name="came-pytorch",
     license='MIT',
-    version="0.1.2",
+    version="0.1.3",
     author="Yang Luo",
     author_email="yangluo@comp.nus.edu.sg",
     description="CAME Optimizer - Pytorch Version",
