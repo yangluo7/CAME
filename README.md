@@ -35,7 +35,7 @@ optimizer = CAME(
 
 ## Hyper-parameter Tuning
 
-* Pre-training: Based on our experiments on BERT-Large, GPT-2, and T5, it's suitable to choose a learning rate for CAME 0.2-0.8x lr for AdamW.
+* Pre-training: Based on our experiments on BERT-Large, GPT-2, and T5, it's suitable to choose a learning rate for CAME 0.5-0.9x lr for AdamW.
 * Set $\beta_1$ and $\beta_2$ to the same values used in AdamW. Choose $\beta_3$ to be larger than $\beta_2$. For example, consider choosing $\beta_3$ between $[0.9995, 0.99995]$ if setting $\beta_1, \beta_2=0.9, 0.999$, and choosing $\beta_3$ between $[0.99, 0.999]$ if setting $\beta_1, \beta_2=0.9, 0.95$. Due to computational resource constraints, we did not explore more combinations of three betas. Different training tasks may require different combinations of optimal performance.
 * If you have any feedback or comments regarding hyper-parameter tuning, please do not hesitate to provide them to us!
 
