@@ -43,16 +43,25 @@ optimizer = CAME(
 
 Apart from the BERT and T5 experiments shown in the paper, we conduct more and record the results here.
 
-### Fine-tuning LLaMA-7B
+### Fine-tuning Llama-7B
 
-|                | MMLU      | WikiText | HellaSwag | TruthfulQA (MC) | BoolQ     | COPA      | WSC       | WIC       |
-| -------------- | --------- | -------- | --------- | --------------- | --------- | --------- | --------- | --------- |
-| Alpaca-7B      | 40.21     | 6.74     | 59.76     | **38.89**       | **79.57** | **88.00** | 46.15     | 49.84     |
-| Alpaca-7B-CAME | **40.59** | **6.38** | **59.80** | 38.61           | 79.08     | **88.00** | **49.04** | **50.78** |
+|                |    MMLU     |  WikiText  |  HellaSwag  |  TruthfulQA (MC)  |    BoolQ    |    COPA     |     WSC     |     WIC     |
+| -------------- |:-----------:|:----------:|:-----------:|:-----------------:|:-----------:|:-----------:|:-----------:|:-----------:|
+| Alpaca-7B      |    40.21    |    6.74    |    59.76    |     **38.89**     |  **79.57**  |  **88.00**  |    46.15    |    49.84    |
+| Alpaca-7B-CAME |  **40.59**  |  **6.38**  |  **59.80**  |       38.61       |    79.08    |  **88.00**  |  **49.04**  |  **50.78**  |
 
-We fine-tuned LLaMA-7B with [stanford-alpaca](https://github.com/tatsu-lab/stanford_alpaca) (52k instruction-tuning dataset). To replicate our result, first register the CAME optimizer to the transformer package. Then in Alpaca training script, change the default optimizer from "adamw" to "came".
+We fine-tuned Llama-7B with [stanford-alpaca](https://github.com/tatsu-lab/stanford_alpaca) (52k instruction-tuning dataset). To replicate our result, first register the CAME optimizer to the transformer package. Then in Alpaca training script, change the default optimizer from "adamw" to "came".
 
 Alpaca-7B and Alpaca-7B-CAME are evaluated using [Instruct-eval](https://github.com/declare-lab/instruct-eval) and [lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness).
+
+### Pre-training Llama on C4
+
+<p align="center">
+<img src="assets/llama_came.png" alt="CAME optimizer of Llama Pre-training" width="50%" />
+</p>
+<!-- ![CAME_code](assets/llama_came.png) -->
+
+The pre-training of Llama-1B is based on [C-Optim](https://github.com/kyleliang919/C-Optim). The hyperparameters of CAME are configured with betas (0.9, 0.95, 0.995), and AdamW uses betas (0.9, 0.95).
 
 ### Pre-training GPT-2
 
